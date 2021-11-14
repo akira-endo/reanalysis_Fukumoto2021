@@ -1,0 +1,82 @@
+sign,name
+D2201,Financial solidity index
+A1301,"Young population	 ($<$15)"
+A1303,"Old Population	 ($\leq$ 65)"
+A1801,Densely inhabited districts population
+A6103,Workers and students from other municipalities in the same prefecture
+A6104,Workers and students from other prefectures
+A6105,Workers and students to other municipalities in the same prefecture
+A6106,Workers and students to other prefectures
+F1101,Labor force
+I6100,Physicians
+I5101,Hospitals
+I5102,Medical clinics
+I5211,Beds of hospitals
+I5212,Beds of medical clinics
+E2501,Elementary school pupils
+E3501,Junior high school students
+F1107,Unemployment
+C120120,"Income	"
+student.per.school.1,Elementary school pupils per school
+student.per.school.2,Junior high school students per school
+A6108,"Daytime population	"
+D320101,Local tax
+D3202,Non transfered revenue
+A5103,In-migrants
+A5104,Out-migrants
+B1101,Livable area
+A2301,"Population density	"
+D3201,Total revenue
+F2201,1st industry employment
+F2211,2nd industry employment
+population,Population
+number.of.health.centers,Number of municipalities covered by the public health center
+1,Iwate Prefecture dummy
+2,Yamagata Prefecture dummy
+3,Fukushima Prefecture dummy
+4,Tochigi Prefecture dummy
+5,Saitama Prefecture dummy
+6,Chiba Prefecture dummy
+7,Tokyo Prefecture dummy
+8,Niigata Prefecture dummy
+9,Toyama Prefecture dummy
+10,Fukui Prefecture dummy
+11,Gifu Prefecture dummy
+12,Aichi Prefecture dummy
+13,Shiga Prefecture dummy
+14,Osaka Prefecture dummy
+15,Tottori Prefecture dummy
+16,Shimane Prefecture dummy
+17,Okayama Prefecture dummy
+18,Hiroshima Prefecture dummy
+19,Yamaguchi Prefecture dummy
+20,Tokushima Prefecture dummy
+21,Kagawa Prefecture dummy
+22,Ehime Prefecture dummy
+23,Saga Prefecture dummy
+24,Nagasaki Prefecture dummy
+25,Oita Prefecture dummy
+26,Miyazaki Prefecture dummy
+cases_1,Number of cases 1 day before the survey date
+cases_2,Number of cases 2 days before the survey date
+cases_3,Number of cases 3 days before the survey date
+cases_4,Number of cases 4 days before the survey date
+cases_5,Number of cases 5 days before the survey date
+cases_6,Number of cases 6 days before the survey date
+cases_7,Number of cases 7 days before the survey date
+prior.infection.per.capita,Cumulative number of cases
+lon,Longitude
+lat,Latitude
+prec_mean,Precipitation
+shine_mean,Daylight hours
+tmean_mean,Temperature
+electoral.time,Days since the last mayoral election
+log.number,Number of bordering municipalities
+shutdown.0304,School closure as of March 4
+shutdown.0316,School closure as of March 16
+shutdown.0406,School closure as of April 6
+shutdown.0410,School closure as of April 10
+shutdown.0416,School closure as of April 16
+shutdown.0422,School closure as of April 22
+age.XXXX,Mayor's age
+win_count.XXXX,Number of mayor's terms
