@@ -30,11 +30,11 @@ gm[,part] <- (10^5)*gm[, part]/gm$pop.2020
 
 ## Null cases from day [nullfrom]-th day
 #gm[1:(nrow(gm)/2)*2-1,part[nullfrom:length(part)]]<-gm[1:(nrow(gm)/2)*2,part[nullfrom:length(part)]]*(1-reduction)
-orig<-as.matrix(gm[1:(nrow(gm)/2)*2,part[nullfrom:length(part)]])
+orig<-as.matrix(gm[1:(nrow(gm)/2)*2,part[nullfrom:length(part)]])*gm$pop.2020[1:(nrow(gm)/2)*2]/1e5
 #newr<-matrix(rnbinom(length(orig),1+orig*gm[1:(nrow(gm)/2)*2-1,]$pop.2020/1e5,mu=(1+orig*gm[1:(nrow(gm)/2)*2-1,]$pop.2020/1e5)/(1/orig+gm[1:(nrow(gm)/2)*2-1,]$pop.2020/1e5)*(1-reduction)),nrow(orig))/(gm[1:(nrow(gm)/2)*2-1,]$pop.2020/1e5)
-newr<-abs(matrix(rnorm(length(orig),orig,sqrt(orig)),nrow(orig)))*(1-reduction)
-newr<-abs(matrix(rnorm(length(orig),newr,sqrt(newr)),nrow(orig)))
-gm[1:(nrow(gm)/2)*2-1,part[nullfrom:length(part)]]<-newr
+newr<-pmax(matrix(rtruncnorm(length(orig),0,Inf,orig,sqrt(orig)),nrow(orig)),0,na.rm=T)*(1-reduction)
+newr<-pmax(matrix(rtruncnorm(length(orig),0,Inf,newr,sqrt(newr)),nrow(orig)),0,na.rm=T)
+gm[1:(nrow(gm)/2)*2-1,part[nullfrom:length(part)]]<-newr/gm$pop.2020[1:(nrow(gm)/2)*2-1]*1e5
 ##
 
 summary.Match.out2 <- matrix(NA, length(part), 2)
