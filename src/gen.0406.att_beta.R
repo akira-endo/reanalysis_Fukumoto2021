@@ -28,22 +28,12 @@ part <- 120:148 # indicates March 30 to April 27
 part.adj <- part - 54
 gm[,part] <- (10^5)*gm[, part]/gm$pop.2020
 
-## Null cases from day [nullfrom]-th day
-#gm[1:(nrow(gm)/2)*2-1,part[nullfrom:length(part)]]<-gm[1:(nrow(gm)/2)*2,part[nullfrom:length(part)]]*(1-reduction)
-#orig<-as.matrix(gm[1:(nrow(gm)/2)*2,part[nullfrom:length(part)]])*gm$pop.2020[1:(nrow(gm)/2)*2]/1e5
-#newr<-matrix(rnbinom(length(orig),1+orig*gm[1:(nrow(gm)/2)*2-1,]$pop.2020/1e5,mu=(1+orig*gm[1:(nrow(gm)/2)*2-1,]$pop.2020/1e5)/(1/orig+gm[1:(nrow(gm)/2)*2-1,]$pop.2020/1e5)*(1-reduction)),nrow(orig))/(gm[1:(nrow(gm)/2)*2-1,]$pop.2020/1e5)
-#newr<-pmax(matrix(rtruncnorm(length(orig),0,Inf,orig,sqrt(orig)),nrow(orig)),0,na.rm=T)*(1-reduction)
-#newr<-pmax(matrix(rnorm(length(orig),newr,sqrt(newr)),nrow(orig)),0,na.rm=T)
-#newr<-pmax(matrix(rgamma(length(orig),1+orig,5+1),nrow(orig)),0,na.rm=T)*(1-reduction)
-#newr<-pmax(matrix(rpois(length(orig),newr),nrow(orig)),0,na.rm=T)
-#gm[1:(nrow(gm)/2)*2-1,part[nullfrom:length(part)]]<-newr/gm$pop.2020[1:(nrow(gm)/2)*2-1]*1e5
-##
+## Resample cases from day [nullfrom]-th day
 ctrlpop=gm$pop.2020[1:(nrow(gm)/2)*2]/1e5
 trpop=gm$pop.2020[1:(nrow(gm)/2)*2-1]/1e5
-orig<-as.matrix(gm[1:(nrow(gm)/2)*2,part[nullfrom:length(part)]])*ctrlpop
+orig<-as.matrix(gm[1:(nrow(gm)/2)*2,part[nullfrom:length(part)]])*ctrlpop #originally observed cases in ctrl municipalities
 #newr<-pmax(matrix(rtruncnorm(length(orig),0,Inf,orig,sqrt(orig)),nrow(orig)),0,na.rm=T)
-#newr<-pmax(matrix(rnorm(length(orig),newr,sqrt(newr)),nrow(orig)),0,na.rm=T)
-newtr<-orig#pmax(matrix(rgamma(length(orig),1+orig,1/rowSums(orig)*ncol(orig)+1),nrow(orig)),0,na.rm=T)
+newtr<-orig
 newctrl<-pmax(matrix(rpois(length(orig),newtr),nrow(orig)),0,na.rm=T)
 newtr<-pmax(matrix(rpois(length(orig),newtr*(1-reduction)*trpop/ctrlpop),nrow(orig)),0,na.rm=T)
 
