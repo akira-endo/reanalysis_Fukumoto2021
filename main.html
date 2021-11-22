@@ -14302,7 +14302,6 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Relative ATC</span>
-<span class="c1">#options(repr.plot.width=10,repr.plot.height=4)</span>
 <span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">15</span><span class="p">,</span><span class="n">repr.plot.height</span><span class="o">=</span><span class="m">6</span><span class="p">)</span>
 <span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">),</span><span class="n">cex</span><span class="o">=</span><span class="m">1.5</span><span class="p">)</span>
 <span class="n">figlabels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;1_e&quot;</span><span class="p">,</span><span class="s">&quot;1_f&quot;</span><span class="p">)</span>
@@ -18700,9 +18699,6 @@ height=360
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">esstables</span><span class="o">=</span><span class="nf">lapply</span><span class="p">(</span><span class="nf">list</span><span class="p">(</span><span class="n">ATCApr6</span><span class="o">=</span><span class="n">ATCApr6</span><span class="p">,</span><span class="n">ATCApr10</span><span class="o">=</span><span class="n">ATCApr10</span><span class="p">,</span><span class="n">ATTApr6</span><span class="o">=</span><span class="n">ATTApr6</span><span class="p">),</span><span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">){</span><span class="n">x</span><span class="o">$</span><span class="n">matchingsummary</span><span class="o">$</span><span class="n">nn</span><span class="o">%&gt;%</span><span class="nf">round</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="m">1</span><span class="p">)})</span>
 <span class="n">esstables</span>
-<span class="c1">#mergedtable=cbind(esstables[[1]],esstables[[2]],esstables[[3]])[c(2,4,3),]%&gt;%round(.,1)</span>
-<span class="c1">#rownames(mergedtable)[3]=&quot;ESS&quot;</span>
-<span class="c1">#mergedtable</span>
 </pre></div>
 
      </div>
@@ -18807,7 +18803,6 @@ The results suggest that, even with as much as 50%/80% mitigating effect, the ap
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## ATT on April 6</span>
-<span class="c1">#options(repr.plot.width=10,repr.plot.height=16/3)</span>
 <span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">15</span><span class="p">,</span><span class="n">repr.plot.height</span><span class="o">=</span><span class="m">8</span><span class="p">)</span>
 <span class="nf">set.seed</span><span class="p">(</span><span class="m">2021</span><span class="p">)</span>
 <span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">),</span><span class="n">cex</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
@@ -23225,7 +23220,6 @@ height=480
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## ATC on April 6</span>
-<span class="c1">#options(repr.plot.width=10,repr.plot.height=16/3)</span>
 <span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">15</span><span class="p">,</span><span class="n">repr.plot.height</span><span class="o">=</span><span class="m">8</span><span class="p">)</span>
 <span class="nf">set.seed</span><span class="p">(</span><span class="m">11</span><span class="p">)</span>
 <span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">),</span><span class="n">cex</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
@@ -29202,7 +29196,7 @@ height=240
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="c1">#suppressWarnings(source(&quot;src/ipw_lasso.R&quot;,chdir=T))</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">suppressWarnings</span><span class="p">(</span><span class="nf">source</span><span class="p">(</span><span class="s">&quot;src/ipw_lasso.R&quot;</span><span class="p">,</span><span class="n">chdir</span><span class="o">=</span><span class="bp">T</span><span class="p">))</span>
 <span class="n">cvl0406</span> <span class="o">&lt;-</span> <span class="nf">readRDS</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;output/ipw_lasso_&quot;</span><span class="p">,</span> <span class="s">&quot;0406&quot;</span><span class="p">,</span><span class="s">&quot;.rds&quot;</span><span class="p">))</span>
 <span class="n">cvl0410</span> <span class="o">&lt;-</span> <span class="nf">readRDS</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;output/ipw_lasso_&quot;</span><span class="p">,</span> <span class="s">&quot;0410&quot;</span><span class="p">,</span><span class="s">&quot;.rds&quot;</span><span class="p">))</span>
 </pre></div>
