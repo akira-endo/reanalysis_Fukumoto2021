@@ -3,7 +3,7 @@ Source code accompanying a correspondence to Fukumoto et al. "No causal effect o
 
 ## Main files
 * main.ipynb/[.html](https://akira-endo.github.io/reanalysis_Fukumoto2021/main.html):
-Jupyter Notebook reanalysing Yokota et al.
+Jupyter Notebook reanalysing Fukumoto et al.
 * manuscript[.pdf](https://akira-endo.github.io/reanalysis_Fukumoto2021/manuscript.pdf):
 Manuscript PDF.
 
@@ -12,7 +12,7 @@ Manuscript PDF.
 [MIT](https://github.com/akira-endo/reanalysis_Fukumoto2021/blob/master/LICENSE)
 
 ## Acknowledgement
-The replication code for the original study ([https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/N803UQ](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/N803UQ)) has been partially modified and reused.
+The [replication code](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/N803UQ) for the original study has been partially modified and reused.
 
 ## Dependencies
 * R ver. 4.1.0
