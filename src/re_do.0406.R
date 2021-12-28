@@ -32,7 +32,7 @@ m.out <- matchit(treat ~ control + pref.dummy +
                  distance = "lasso",
                  pop.size = pop.size,
                  nboots = nboots,
-                 caliper=0.25,
+                 caliper=0.1,
                  replace = TRUE,
                  verbose = FALSE,
                  estimand = "ATC")
