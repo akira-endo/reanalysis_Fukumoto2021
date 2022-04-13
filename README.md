@@ -1,14 +1,11 @@
 # Reanalysis of causal effect analysis of school closure on COVID-19 in Fukumoto et al. (2021)
-Source code accompanying a correspondence to Fukumoto et al. "No causal effect of school closures in Japan on the spread of COVID-19 in spring 2020". [https://www.nature.com/articles/s41591-021-01571-8](https://www.nature.com/articles/s41591-021-01571-8)
+Source code accompanying a manuscript Endo "‘Not finding causal effect’ is not ‘finding no causal effect’ of school closure on COVID-19", which is a correspondence to Fukumoto et al. "No causal effect of school closures in Japan on the spread of COVID-19 in spring 2020". [https://www.nature.com/articles/s41591-021-01571-8](https://www.nature.com/articles/s41591-021-01571-8)
 
 ## Main files
 * main.ipynb/[.html](https://akira-endo.github.io/reanalysis_Fukumoto2021/main.html):
 Jupyter Notebook reanalysing Fukumoto et al.
-* manuscript[.pdf](https://akira-endo.github.io/reanalysis_Fukumoto2021/manuscript.pdf):
-Manuscript PDF.
 
 ## Licence
-
 [MIT](https://github.com/akira-endo/reanalysis_Fukumoto2021/blob/master/LICENSE)
 
 ## Acknowledgement
